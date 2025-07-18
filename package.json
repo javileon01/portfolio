@@ -1,0 +1,19 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Bienvenido/a a mi portfolio personal. Aquí recopilo algunos de mis proyectos más destacados, información sobre mi formación y experiencia, así como formas de contacto.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "tailwindcss -i ./assets/css/input.css -o ./src/css/tailwind.css",
+    "watch-css": "tailwindcss -i ./assets/css/input.css -o ./src/css/tailwind.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.1"
+  }
+}
