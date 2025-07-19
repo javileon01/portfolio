@@ -6,7 +6,11 @@ module.exports = {
     './src/**/*.js',          // Para JS si tienes componentes/scripts usando Tailwind
   ],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        'xxl': '1400px', // Pantalla extra grande
+      },
+    },
   },
   plugins: [],
 }
