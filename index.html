@@ -7,6 +7,19 @@
   <link href="src/css/input.css" rel="stylesheet" />
   <link href="src/css/main.css" rel="stylesheet" />
   <link href="src/css/tailwind.css" rel="stylesheet" />
+
+  <!-- Favicon e iconos -->
+  <link rel="icon" type="image/png" sizes="32x32" href="src/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="src/icons/favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="src/icons/favicon.ico">
+
+  <!-- Iconos para dispositivos Apple/Android -->
+  <link rel="apple-touch-icon" sizes="180x180" href="src/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="src/icons/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="src/icons/android-chrome-512x512.png">
+
+  <!-- Manifest PWA -->
+  <link rel="manifest" href="src/icons/site.webmanifest">
 </head>
 <body class="bg-neutral-900 text-white min-h-screen">
   <!-- Navbar -->
@@ -18,7 +31,7 @@
         <div class="text-sm text-neutral-400 mt-1">Multimedia Engineer</div>
       </div>
       <!-- Enlaces -->
-      <ul class="flex space-x-10 text-base font-medium">
+      <ul class="hidden lg:flex space-x-10 text-base font-medium">
         <li>
             <a href="#about" id="nav-about"
             class="nav-link px-6 py-2 rounded-lg transition-colors duration-200 text-neutral-300 hover:bg-neutral-800 hover:text-neutral-200">
@@ -44,7 +57,54 @@
             </a>
         </li>
       </ul>
+
+      <!-- Botón hamburguesa -->
+      <button id="menu-toggle" class="block lg:hidden ml-4 p-2 rounded-lg border border-neutral-700 bg-zinc-950 hover:bg-neutral-800 focus:outline-none transition-all duration-150 text-neutral-200"
+        aria-label="Open menu" type="button">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
     </nav>
+
+    <!-- Menú móvil -->
+    <div id="mobile-menu"
+      class="fixed top-20 left-0 right-0 z-40 bg-neutral-900 border-t border-neutral-800 shadow-lg transition-all duration-300 ease-in-out scale-y-0 opacity-0 origin-top lg:hidden">
+      <ul class="grid grid-cols-1 divide-y divide-neutral-800">
+        <li>
+          <a href="#about"
+            class="menu-mobile-link block w-full text-center px-6 py-5 text-lg font-semibold text-neutral-300
+                    hover:bg-sky-950 hover:text-sky-400 transition rounded-none">
+            About
+          </a>
+        </li>
+        <li>
+          <a href="#projects"
+            class="menu-mobile-link block w-full text-center px-6 py-5 text-lg font-semibold text-neutral-300
+                    hover:bg-sky-950 hover:text-sky-400 transition rounded-none">
+            Projects
+          </a>
+        </li>
+        <li>
+          <a href="#skills"
+            class="menu-mobile-link block w-full text-center px-6 py-5 text-lg font-semibold text-neutral-300
+                    hover:bg-sky-950 hover:text-sky-400 transition rounded-none">
+            Skills
+          </a>
+        </li>
+        <li>
+          <a href="#contact"
+            class="menu-mobile-link block w-full text-center px-6 py-5 text-lg font-semibold text-neutral-300
+                    hover:bg-sky-950 hover:text-sky-400 transition rounded-none">
+            Contact
+          </a>
+        </li>
+      </ul>
+
+    </div>
+
   </header>
 
   <!-- Secciones -->
@@ -55,7 +115,7 @@
       <div class="max-w-7xl w-full flex flex-col xxl:flex-row gap-8 xxl:gap-[22rem] items-center xxl:items-start">
         <!-- Foto circular -->
         <div class="flex justify-center xxl:justify-start w-full xxl:w-auto">
-          <div class="w-40 h-40 sm:w-64 sm:h-64 xxl:w-[22rem] xxl:h-[22rem] rounded-full overflow-hidden 
+          <div class="w-44 h-44 sm:w-64 sm:h-64 xxl:w-[22rem] xxl:h-[22rem] rounded-full overflow-hidden 
                       flex-shrink-0 mt-4 xxl:mt-20 bg-neutral-800 mx-auto xxl:mx-0 shadow-[0_0_80px_14px_rgba(56,189,248,0.15)]">
             <img src="src/img/foto_mia.jpg" alt="Javier León Soler"
               class="w-full h-full object-cover" />
@@ -129,9 +189,9 @@
     </div>
   </footer>
 
-  <!-- Script para highlight -->
+  <!-- Script para highlight + menú hamburguesa -->
   <script>
-    // IDs de secciones y de los enlaces del nav
+    // --- Highlight del nav ---
     const sections = ['about', 'projects', 'skills', 'contact'];
     const navLinks = sections.map(id => document.getElementById('nav-' + id));
 
@@ -148,17 +208,39 @@
 
       navLinks.forEach((link, idx) => {
         if (idx === activeIndex) {
-            link.classList.add('bg-sky-950', 'text-sky-400', 'shadow-sm');
-            link.classList.remove('text-neutral-300', 'hover:bg-neutral-800', 'hover:text-neutral-200');
+          link.classList.add('bg-sky-950', 'text-sky-400', 'shadow-sm');
+          link.classList.remove('text-neutral-300', 'hover:bg-neutral-800', 'hover:text-neutral-200');
         } else {
-            link.classList.remove('bg-sky-950', 'text-sky-400', 'shadow-sm');
-            link.classList.add('text-neutral-300', 'hover:bg-neutral-800', 'hover:text-neutral-200');
+          link.classList.remove('bg-sky-950', 'text-sky-400', 'shadow-sm');
+          link.classList.add('text-neutral-300', 'hover:bg-neutral-800', 'hover:text-neutral-200');
         }
       });
     }
 
     window.addEventListener('scroll', onScroll);
     window.addEventListener('DOMContentLoaded', onScroll);
+
+    // --- Menú hamburguesa móvil ---
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (menuToggle && mobileMenu) {
+      menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('scale-y-0');
+        mobileMenu.classList.toggle('opacity-0');
+        mobileMenu.classList.toggle('scale-y-100');
+        mobileMenu.classList.toggle('opacity-100');
+      });
+
+      // Cerrar menú al hacer clic en un enlace del menú móvil
+      document.querySelectorAll('.menu-mobile-link').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('scale-y-0', 'opacity-0');
+          mobileMenu.classList.remove('scale-y-100', 'opacity-100');
+        });
+      });
+    }
   </script>
+
 </body>
 </html>
