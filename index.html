@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Javier León</title>
+  <link href="src/css/input.css" rel="stylesheet" />
+  <link href="src/css/main.css" rel="stylesheet" />
+  <link href="src/css/tailwind.css" rel="stylesheet" />
+</head>
+<body class="bg-neutral-900 text-white min-h-screen">
+  <!-- Navbar -->
+  <header class="sticky top-0 left-0 right-0 z-50 bg-zinc-950/80 backdrop-blur-md border-b border-neutral-800">
+    <nav class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+      <!-- Nombre + Subtítulo -->
+      <div>
+        <div class="text-2xl font-bold">Javier León Soler</div>
+        <div class="text-sm text-neutral-400 mt-1">Multimedia Engineer</div>
+      </div>
+      <!-- Enlaces -->
+      <ul class="flex space-x-10 text-base font-medium">
+        <li>
+            <a href="#about" id="nav-about"
+            class="nav-link px-6 py-2 rounded-lg transition-colors duration-200 text-neutral-300">
+            About
+            </a>
+        </li>
+        <li>
+            <a href="#projects" id="nav-projects"
+            class="nav-link px-6 py-2 rounded-lg transition-colors duration-200 text-neutral-300">
+            Projects
+            </a>
+        </li>
+        <li>
+            <a href="#skills" id="nav-skills"
+            class="nav-link px-6 py-2 rounded-lg transition-colors duration-200 text-neutral-300">
+            Skills
+            </a>
+        </li>
+        <li>
+            <a href="#contact" id="nav-contact"
+            class="nav-link px-6 py-2 rounded-lg transition-colors duration-200 text-neutral-300">
+            Contact
+            </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Secciones dummy -->
+  <main>
+    <section id="about" class="h-screen flex items-center justify-center">
+      <h1 class="text-4xl font-bold">About Section</h1>
+    </section>
+    <section id="projects" class="h-screen flex items-center justify-center bg-zinc-950">
+      <h1 class="text-4xl font-bold">Projects Section</h1>
+    </section>
+    <section id="skills" class="h-screen flex items-center justify-center">
+      <h1 class="text-4xl font-bold">Skills Section</h1>
+    </section>
+    <section id="contact" class="h-screen flex items-center justify-center bg-zinc-950">
+      <h1 class="text-4xl font-bold">Contact Section</h1>
+    </section>
+  </main>
+
+  <!-- Script para highlight -->
+  <script>
+    // IDs de secciones y de los enlaces del nav
+    const sections = ['about', 'projects', 'skills', 'contact'];
+    const navLinks = sections.map(id => document.getElementById('nav-' + id));
+
+    function onScroll() {
+      const scrollPosition = window.scrollY + window.innerHeight / 3; // Ajuste de activación
+
+      let activeIndex = 0;
+      sections.forEach((id, idx) => {
+        const section = document.getElementById(id);
+        if (section.offsetTop <= scrollPosition) {
+          activeIndex = idx;
+        }
+      });
+
+      navLinks.forEach((link, idx) => {
+        if (idx === activeIndex) {
+            link.classList.add('bg-sky-950', 'text-sky-400', 'shadow-sm');
+            link.classList.remove('text-neutral-300');
+        } else {
+            link.classList.remove('bg-sky-950', 'text-sky-400', 'shadow-sm');
+            link.classList.add('text-neutral-300');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', onScroll);
+    window.addEventListener('DOMContentLoaded', onScroll);
+  </script>
+</body>
+</html>

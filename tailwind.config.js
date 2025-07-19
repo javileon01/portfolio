@@ -1,9 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [],
+  content: [
+    './*.html',               // Para archivos HTML en la raíz
+    './src/**/*.html',        // Para HTML dentro de src y subcarpetas
+    './src/**/*.js',          // Para JS si tienes componentes/scripts usando Tailwind
+  ],
   theme: {
     extend: {},
   },
   plugins: [],
 }
-
