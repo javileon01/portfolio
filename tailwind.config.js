@@ -8,6 +8,7 @@ module.exports = {
   theme: {
     extend: {
       screens: {
+        'lgplus': '900px', // Pantalla grande
         'xxl': '1400px', // Pantalla extra grande
       },
     },
