@@ -5,3 +5,7 @@ html {
 .body-no-scroll {
   overflow: hidden;
 }
+
+.border-05 {
+  border-width: 0.5px;
+}
