@@ -208,7 +208,7 @@
           </div>
         </div>
 
-        <!-- Modal fondo oscuro -->
+        <!-- Modal de bioApS -->
         <div id="bioapsModal" class="fixed inset-0 bg-black/60 z-50 items-center justify-center hidden">
           <div class="bg-neutral-900 max-w-3xl w-full rounded-2xl shadow-2xl border border-emerald-700 p-8 relative overflow-y-auto max-h-[95vh]">
             <!-- Cerrar -->
@@ -222,22 +222,22 @@
             <!-- Grid de imágenes -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-7 mb-6">
               <!-- Screenshot 1 -->
-              <div>
+              <div class="hover:-translate-y-2 transition-transform duration-300">
                 <img src="src/img/home_iphone.png" alt="bioApS Home iPhone" class="rounded-lg shadow mb-2"/>
                 <div class="text-neutral-200 text-md text-center pt-2">Home / Glossary on iPhone</div>
               </div>
               <!-- Screenshot 2 -->
-              <div>
+              <div class="hover:-translate-y-2 transition-transform duration-300">
                 <img src="src/img/menu_iphone.png" alt="bioApS Menu iPhone" class="rounded-lg shadow mb-2"/>
                 <div class="text-neutral-200 text-md text-center pt-2">Main menu on iPhone</div>
               </div>
               <!-- Screenshot 3 -->
-              <div>
+              <div class="hover:-translate-y-2 transition-transform duration-300">
                 <img src="src/img/quiz_android.png" alt="bioApS Quiz Android" class="rounded-lg shadow mb-2"/>
                 <div class="text-neutral-200 text-md text-center pt-2">Quiz module on Android phone</div>
               </div>
               <!-- Screenshot 4 -->
-              <div>
+              <div class="hover:-translate-y-2 transition-transform duration-300">
                 <img src="src/img/videos_tablet.png" alt="bioApS Videos Tablet" class="rounded-lg shadow mb-2"/>
                 <div class="text-neutral-200 text-md text-center pt-2">Educational videos on tablet</div>
               </div>
@@ -258,7 +258,6 @@
             </div>
           </div>
         </div>
-
 
         <!-- Card 2 -->
         <div class="group bg-neutral-800 rounded-2xl shadow-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_8px_40px_0_rgba(59,130,246,0.20)] relative overflow-hidden">
@@ -283,7 +282,8 @@
               <span class="bg-neutral-700 text-sm px-3 py-1 rounded-md">Responsive Design</span>
             </div>
             <div class="flex items-center gap-8 mt-2">
-              <button class="px-5 py-2 border border-blue-500 rounded-lg text-blue-400 font-semibold hover:bg-blue-500/10 transition-all duration-200 focus:outline-none">
+              <button class="px-5 py-2 border border-blue-500 rounded-lg text-blue-400 font-semibold hover:bg-blue-500/10 transition-all duration-200 focus:outline-none"
+                      onclick="openProaffinityModal()">
                 View Screenshots
               </button>
               <span class="text-md text-neutral-400 italic">
@@ -292,6 +292,69 @@
             </div>
           </div>
         </div>
+
+        <!-- Modal de ProAffinity -->
+        <div id="proaffinityModal" class="fixed inset-0 bg-black/60 z-50 items-center justify-center hidden">
+          <div class="bg-neutral-900 max-w-6xl w-full rounded-2xl shadow-2xl border border-blue-700 p-8 relative overflow-y-auto max-h-[95vh]">
+            <!-- Cerrar -->
+            <button onclick="closeProaffinityModal()" class="absolute top-4 right-4 text-blue-400 hover:text-blue-300 text-3xl font-bold">
+              &times;
+            </button>
+            <!-- Título -->
+            <h2 class="text-3xl font-bold mb-8 text-blue-400 flex items-center gap-3">
+              ProAffinity Screenshots
+            </h2>
+            <!-- Grid de imágenes -->
+            <div class="grid grid-cols-1 gap-10 mb-6">
+              <!-- 1. Inicio profesionales -->
+              <div>
+                <img src="src/img/pantalla_inicio_profesionales.png" alt="ProAffinity Home Professionals" class="rounded-lg shadow mb-2"/>
+                <div class="text-neutral-200 text-lg text-center pt-2">Professional dashboard</div>
+              </div>
+              <!-- 2. Inicio empresas -->
+              <div>
+                <img src="src/img/pantalla_inicio_empresas.png" alt="ProAffinity Home Companies" class="rounded-lg shadow mb-2"/>
+                <div class="text-neutral-200 text-lg text-center pt-2">Company dashboard</div>
+              </div>
+              <!-- 3. Perfil profesional -->
+              <div>
+                <img src="src/img/pantalla_perfil_profesional.png" alt="ProAffinity Professional Profile" class="rounded-lg shadow mb-2"/>
+                <div class="text-neutral-200 text-lg text-center pt-2">Professional profile page</div>
+              </div>
+              <!-- 4. Ofertas empresa -->
+              <div>
+                <img src="src/img/pantalla_ofertas_empresa.png" alt="ProAffinity Company Offers" class="rounded-lg shadow mb-2"/>
+                <div class="text-neutral-200 text-lg text-center pt-2">Company job offers management</div>
+              </div>
+              <!-- 5. Ofertas profesional -->
+              <div>
+                <img src="src/img/pantalla_ofertas_profesional.png" alt="ProAffinity Professional Offers" class="rounded-lg shadow mb-2"/>
+                <div class="text-neutral-200 text-lg text-center pt-2">Offers browser for professionals</div>
+              </div>
+              <!-- 6. Candidatos inscritos -->
+              <div>
+                <img src="src/img/pantalla_candidatos.png" alt="ProAffinity Candidates" class="rounded-lg shadow mb-2"/>
+                <div class="text-neutral-200 text-lg text-center pt-2">Candidates registered to an offer</div>
+              </div>
+            </div>
+            <div class="flex items-center justify-between mt-4 gap-4">
+              <!-- Aviso de privacidad -->
+              <div class="p-4 rounded-lg border border-blue-700 bg-neutral-800/90 text-blue-300 text-sm md:text-lg">
+                Code and live demo available upon request.
+                For privacy reasons, full code and documentation are not public.
+              </div>
+              <!-- Botón Close -->
+              <button
+                class="flex-1 ml-2 px-6 py-3 border text-lg border-blue-500 rounded-lg text-blue-400 font-semibold bg-neutral-900 hover:bg-blue-500/10 transition-all duration-150"
+                onclick="closeProaffinityModal()"
+                type="button"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+
 
         <!-- Card 3 -->
         <div class="group bg-neutral-800 rounded-2xl shadow-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_8px_40px_0_rgba(244,63,94,0.15)] relative overflow-hidden">
@@ -435,12 +498,35 @@
       document.body.classList.remove('body-no-scroll'); // Permitir scroll del body
     }
 
-    // Cerrar modal al pulsar Escape
+    // --- Modal ProAffinity ---
+    function openProaffinityModal() {
+      const modal = document.getElementById('proaffinityModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.classList.add('body-no-scroll'); // Evitar scroll del body
+    }
+
+    function closeProaffinityModal() {
+      const modal = document.getElementById('proaffinityModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.classList.remove('body-no-scroll'); // Permitir scroll del body
+    }
+
     document.addEventListener('keydown', function(event) {
-      const modal = document.getElementById('bioapsModal');
-      if (modal && modal.classList.contains('flex') && event.key === "Escape") {
-        modal.classList.add('hidden');
-        modal.classList.remove('flex');
+      if (event.key === "Escape") {
+        // ProAffinity modal
+        const proaffinityModal = document.getElementById('proaffinityModal');
+        if (proaffinityModal && proaffinityModal.classList.contains('flex')) {
+          closeProaffinityModal();
+          return; // Para evitar que se cierre más de un modal a la vez
+        }
+        // bioApS modal
+        const bioapsModal = document.getElementById('bioapsModal');
+        if (bioapsModal && bioapsModal.classList.contains('flex')) {
+          closeBioapsModal();
+          return;
+        }
       }
     });
   </script>
