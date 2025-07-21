@@ -10,6 +10,8 @@ module.exports = {
       screens: {
         'lgplus': '900px', // Pantalla grande
         'xxl': '1400px', // Pantalla extra grande
+        '2xs': '480px', // Pantalla extra pequeña
+        '3xs': '380px', // Pantalla extra extra pequeña
       },
     },
   },
