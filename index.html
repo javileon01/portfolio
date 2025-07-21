@@ -147,13 +147,12 @@
     <!-- Sección de proyectos -->
     <section id="projects" class="min-h-screen flex flex-col items-center justify-center bg-zinc-950 pt-20 pb-28">
 
-      <header class="mb-16 w-full flex flex-col items-center">
+      <header class="mb-[4.5rem] w-full flex flex-col items-center">
         <h1 class="text-4xl md:text-5xl font-extrabold text-white text-center leading-tight">
           Featured Projects
         </h1>
-        <p class="mt-6 text-lg md:text-xl text-neutral-300 text-center max-w-2xl font-normal">
-          A showcase of my work spanning web development, mobile applications,<br />
-          and digital solutions
+        <p class="mt-6 text-lg md:text-2xl text-neutral-300 text-center max-w-[45rem] font-normal">
+          A showcase of my work spanning web development, mobile applications, and digital solutions
         </p>
       </header>
 
@@ -391,7 +390,7 @@
         <h1 class="text-4xl md:text-5xl font-extrabold text-white text-center leading-tight">
           Skills & Languages
         </h1>
-        <p class="mt-6 text-lg md:text-xl text-neutral-300 text-center max-w-2xl font-normal">
+        <p class="mt-6 text-lg md:text-2xl text-neutral-300 text-center max-w-2xl font-normal">
           Technical expertise and language proficiencies that drive innovation and effective digital solutions.
         </p>
       </header>
@@ -577,11 +576,90 @@
           <span class="text-xs mt-2 opacity-80">Not certified</span>
         </div>
       </div>
+      
     </section>
 
-    <!-- Sección de contacto -->
-    <section id="contact" class="h-screen flex items-center justify-center bg-zinc-950">
-      <h1 class="text-4xl font-bold">Contact Section</h1>
+    <section id="contact" class="w-full flex flex-col items-center justify-start px-4 py-24 bg-neutral-950">
+      <!-- Header -->
+      <header class="mb-16 w-full flex flex-col items-center">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-white text-center leading-tight">
+          Get In Touch
+        </h1>
+        <p class="mt-6 text-lg md:text-2xl text-neutral-300 text-center max-w-2xl font-normal">
+          Ready to collaborate? Let's connect and discuss how we can work together
+        </p>
+      </header>
+
+      <!-- Cards -->
+      <div class="w-full max-w-[58rem] grid grid-cols-1 md:grid-cols-[1.20fr_1fr] gap-8">
+        <!-- Left Card: Let's Connect -->
+        <div class="bg-neutral-900 rounded-2xl p-8 shadow-lg flex flex-col">
+          <div>
+            <h3 class="text-2xl font-bold text-white mb-5">Let's Connect</h3>
+            <p class="text-neutral-300 text-lg mb-8">
+              I'm always open to new opportunities, exciting projects, and interesting connections.
+              Whether you have a question, want to collaborate, or just want to say hi, feel free to reach out!
+            </p>
+            <div class="flex flex-col gap-4">
+              <!-- Email -->
+              <a href="mailto:javierleonsoler01@gmail.com"
+                class="group flex items-center gap-4 rounded-xl px-4 py-3 transition bg-neutral-800 hover:bg-green-900/50 mb-1">
+                <span class="bg-green-900/70 rounded-xl p-2 flex items-center justify-center">
+                    <i data-lucide="mail" class="w-6 h-6 text-green-400"></i>
+                </span>
+                <span>
+                  <span class="block text-sm text-neutral-400">Email me directly</span>
+                  <span class="block font-semibold text-lg text-white">javierleonsoler01@gmail.com</span>
+                </span>
+              </a>
+            </div>
+          </div>
+          <!-- Available for work -->
+          <div class="flex items-center gap-2 mt-5 px-4 py-3 bg-neutral-800 rounded-xl text-neutral-400 text-md">
+            <i data-lucide="map-pin" class="w-5 h-5 text-red-300"></i>
+            Available for remote work and global opportunities
+          </div>
+        </div>
+
+        <!-- Right Card: Professional Resources -->
+        <div class="bg-neutral-900 rounded-2xl p-8 shadow-lg flex flex-col justify-between">
+          <div>
+            <h3 class="text-2xl font-bold text-white mb-5">Professional Resources</h3>
+            <div class="flex flex-col gap-5">
+              <!-- LinkedIn -->
+              <a href="https://www.linkedin.com/in/javier-le%C3%B3n-soler-2675012a9/" target="_blank"
+                class="flex items-center gap-4 rounded-xl px-4 py-3 transition bg-neutral-800 hover:bg-sky-900/40">
+                <span class="text-sky-400"><i data-lucide="linkedin" class="w-7 h-7"></i></span>
+                <span>
+                  <span class="block font-semibold text-lg text-white">LinkedIn</span>
+                  <span class="block text-sm text-neutral-400">View Profile</span>
+                </span>
+              </a>
+              <!-- GitHub -->
+              <a href="https://github.com/javileon01" target="_blank"
+                class="flex items-center gap-4 rounded-xl px-4 py-3 transition bg-neutral-800 hover:bg-violet-900/40">
+                <span class="text-violet-400"><i data-lucide="github" class="w-7 h-7"></i></span>
+                <span>
+                  <span class="block font-semibold text-lg text-white">GitHub</span>
+                  <span class="block text-sm text-neutral-400">View Profile</span>
+                </span>
+              </a>
+              <!-- CV English -->
+              <a href="src/docs/cv_javier_leon_eng.pdf" download
+                class="flex items-center gap-3 rounded-xl px-4 py-3 font-semibold bg-blue-700 text-white text-lg hover:bg-blue-800 transition">
+                <i data-lucide="download" class="w-7 h-7"></i>
+                Download CV (English)
+              </a>
+              <!-- CV Spanish -->
+              <a href="src/docs/cv_javier_leon_esp.pdf" download
+                class="flex items-center gap-3 rounded-xl px-4 py-3 font-semibold bg-green-700 text-white text-lg hover:bg-green-800 transition">
+                <i data-lucide="download" class="w-7 h-7"></i>
+                Download CV (Spanish)
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
   </main>
