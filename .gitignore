@@ -1,6 +1,5 @@
 node_modules/
 dist/
-src/css/tailwind.css
 .env
 .DS_Store
 npm-debug.log*
