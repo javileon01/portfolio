@@ -36,8 +36,8 @@ Available on GitHub Pages:
 ## 📫 Contact
 
 - **Email:** javierleonsoler01@gmail.com  
-- [LinkedIn](https://linkedin.com/in/your-profile)  
-- [GitHub](https://github.com/javierleon01)
+- [LinkedIn]([https://linkedin.com/in/your-profile](https://www.linkedin.com/in/javier-le%C3%B3n-soler-2675012a9/))  
+- [GitHub]([https://github.com/javierleon01](https://github.com/javileon01))
 
 ---
 
