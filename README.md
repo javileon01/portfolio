@@ -29,7 +29,7 @@ You can find a live demo and screenshots of the portfolio in the following secti
 ## 🚀 Live Demo
 
 Available on GitHub Pages:  
-[https://javierleon01.github.io/portfolio/](https://javierleon01.github.io/portfolio/)
+[https://javierleon01.github.io/portfolio/](https://javileon01.github.io/portfolio/)
 
 ---
 
