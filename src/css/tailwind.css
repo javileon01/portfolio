@@ -1745,6 +1745,10 @@ video {
     margin-top: 1.5rem;
   }
 
+  .sm\:flex {
+    display: flex;
+  }
+
   .sm\:inline-flex {
     display: inline-flex;
   }
@@ -1784,10 +1788,6 @@ video {
   .sm\:rounded-t-2xl {
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
-  }
-
-  .sm\:p-4 {
-    padding: 1rem;
   }
 
   .sm\:p-8 {
